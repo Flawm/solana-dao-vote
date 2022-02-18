@@ -48,7 +48,7 @@ export async function establishPayer(): Promise<void> {
 }
 
 const program_id = new PublicKey(
-  '5fN4XFf4Q8zKEfLoLNsYdYCTsQ4V7FttTdCY3bcMWbcX'
+  'Daovoteq2Y28gJyme6TNUXT9TxXrePiouFuHezkiozci'
 );
 
 export async function castVote(): Promise<void> {
