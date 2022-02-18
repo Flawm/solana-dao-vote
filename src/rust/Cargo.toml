@@ -1,0 +1,31 @@
+[package]
+name = "dao-voter"
+version = "0.0.1"
+description = ""
+authors = ["vlawmz <@flawmz>"]
+repository = ""
+license = "GPL-2.0"
+homepage = ""
+edition = "2018"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+md5 = "0.7.0"
+num-traits = "0.2"
+num-derive = "0.3"
+borsh = "0.9.1"
+borsh-derive = "0.9.1"
+solana-program = "=1.8.14"
+metaplex-token-metadata = { version="0.0.1", features= [ "no-entrypoint" ] }
+spl-token = { version="3.2.0", features = [ "no-entrypoint" ] }
+thiserror = "1.0"
+
+[dev-dependencies]
+solana-program-test = "=1.8.14"
+solana-sdk = "=1.8.14"
+
+[lib]
+crate-type = ["cdylib"]
+path = "src/entrypoint.rs"
