@@ -108,7 +108,9 @@ export async function castVote(): Promise<void> {
     programId: program_id,
     data: Buffer.from(
       new Uint8Array(
-        [1].concat(Array.from(toU64Le(vote))).concat(Array.from(toU64Le(1)))
+        [1]
+          .concat(Array.from(toU64Le(vote)))
+          .concat(Array.from(toU64Le(+process.argv[5])))
       )
     ),
   });
@@ -224,7 +226,7 @@ export async function createVote(): Promise<void> {
       new Uint8Array(
         [2]
           .concat(Array.from(toU64Le(vote)))
-          .concat(Array.from(Buffer.from(process.argv[5])))
+          .concat(Array.from(toU64Le(+process.argv[5])))
       )
     ),
   });

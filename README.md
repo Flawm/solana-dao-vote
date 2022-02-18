@@ -20,7 +20,7 @@
 
 ```bash
 npm run create -- <mint_id> <vote_id> <creator_0> <url>
-npm run vote -- <mint_id> <vote_id> <vote_option>
+npm run vote -- <mint_id> <vote_id> <creator_0> <vote_option>
 ```
 
 # Shout outs
